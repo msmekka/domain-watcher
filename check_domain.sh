@@ -67,13 +67,13 @@ attempt_registration() {
 
   if [ "$status" = "SUCCESS" ]; then
     log "✅ SUCCESS! $DOMAIN registered successfully!"
-    send_sms "SUCCESS! uncommon.ai has been registered to your Porkbun account!"
+    send_sms "SUCCESS! $DOMAIN has been registered to your Porkbun account!"
   else
     local error_msg
     error_msg=$(echo "$response" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('message','Unknown error'))" 2>/dev/null)
     log "❌ Registration attempted but failed: $error_msg"
     log "Full response: $response"
-    send_sms "ALERT: uncommon.ai is available but registration failed: $error_msg. Log in to Porkbun NOW!"
+    send_sms "ALERT: $DOMAIN is available but registration failed: $error_msg. Log in to Porkbun NOW!"
   fi
 }
 
