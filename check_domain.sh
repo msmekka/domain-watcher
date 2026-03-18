@@ -10,7 +10,7 @@
 # Load environment variables
 source "$(dirname "$0")/.env"
 
-DOMAIN="uncommon.ai"
+DOMAIN=$DOMAIN
 LOG_FILE="$(dirname "$0")/domain_watcher.log"
 SMS_GATEWAY="${NOTIFY_EMAIL}"  # AT&T: number@txt.att.net
 FROM_EMAIL="${FROM_EMAIL}"
