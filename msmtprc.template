@@ -10,9 +10,9 @@ logfile        ~/.msmtp.log
 account        gmail
 host           smtp.gmail.com
 port           587
-from           mekwil74@gmail.com
-user           mekwil74@gmail.com
-password       "cuwm gsgp aotv acxm"
+from           youremail@gmail.com
+user           youremail@gmail.com
+password       "your app password"
 
 
 account default : gmail
