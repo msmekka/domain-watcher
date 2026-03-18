@@ -1,0 +1,18 @@
+# msmtp config for Gmail
+# Copy this to ~/.msmtprc and chmod 600 ~/.msmtprc
+
+defaults
+auth           on
+tls            on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+logfile        ~/.msmtp.log
+
+account        gmail
+host           smtp.gmail.com
+port           587
+from           mekwil74@gmail.com
+user           mekwil74@gmail.com
+password       "cuwm gsgp aotv acxm"
+
+
+account default : gmail
